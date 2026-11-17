@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="Omri Ben Ami — Autonomous Mobility Leader · AI Systems Builder · Technology Explorer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07080d"/><stop offset="0.6" stop-color="#0b0d16"/><stop offset="1" stop-color="#120a1c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ef1ff"/><stop offset="1" stop-color="#b48cff"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="0.18" cy="0.3" r="0.55"><stop offset="0" stop-color="#5ef1ff" stop-opacity="0.13"/><stop offset="1" stop-color="#5ef1ff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowR" cx="0.85" cy="0.8" r="0.5"><stop offset="0" stop-color="#b48cff" stop-opacity="0.16"/><stop offset="1" stop-color="#b48cff" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#1b2030" stroke-width="1"/></pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity="0.35"/></pattern>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+    <clipPath id="typeClip"><rect class="typer" x="72" y="196" width="918" height="34"/></clipPath>
+    <style>
+      .mono{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',ui-monospace,Menlo,Consolas,'Liberation Mono',monospace}
+      .typer{animation:type 3.2s steps(69) 0.6s both}
+      @keyframes type{from{width:0}to{width:918px}}
+      .cursor{animation:blink 1s steps(1) infinite}
+      @keyframes blink{50%{opacity:0}}
+      .sweep{animation:sweep 6s linear infinite}
+      @keyframes sweep{0%{transform:translateY(-60px)}100%{transform:translateY(400px)}}
+      .glitch1{opacity:0;animation:g1 7s steps(1) infinite}
+      .glitch2{opacity:0;animation:g2 7s steps(1) infinite}
+      @keyframes g1{0%,92%,100%{transform:translate(0,0);opacity:0}93%{transform:translate(-4px,0);opacity:.75}95%{transform:translate(3px,-1px);opacity:.6}97%{opacity:0}}
+      @keyframes g2{0%,92%,100%{transform:translate(0,0);opacity:0}93%{transform:translate(4px,1px);opacity:.7}96%{transform:translate(-3px,0);opacity:.55}98%{opacity:0}}
+      .pulse{animation:pulse 3s ease-in-out infinite}
+      @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+      .flow{stroke-dasharray:4 10;animation:flow 2.4s linear infinite}
+      @keyframes flow{to{stroke-dashoffset:-28}}
+    </style>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <rect width="1200" height="340" fill="url(#grid)" opacity="0.55"/>
+  <rect width="1200" height="340" fill="url(#glowL)"/>
+  <rect width="1200" height="340" fill="url(#glowR)"/>
+
+  <!-- neural / sensor graph (right side) -->
+  <g stroke="#b48cff" stroke-opacity="0.35" stroke-width="1" fill="none">
+    <path class="flow" d="M860 70 L960 120 L1080 80 M960 120 L1050 238 L1120 190 M960 120 L955 262 L1050 238 M1050 238 L1060 290 M955 262 L840 290 M1080 80 L1120 190"/>
+  </g>
+  <g fill="#5ef1ff">
+    <circle class="pulse" cx="860" cy="70" r="3"/><circle cx="960" cy="120" r="4" fill="#b48cff"/><circle class="pulse" cx="1080" cy="80" r="3"/>
+    <circle cx="1050" cy="238" r="4"/><circle class="pulse" cx="1120" cy="190" r="3" fill="#b48cff"/><circle cx="955" cy="262" r="3"/>
+    <circle class="pulse" cx="1060" cy="290" r="3"/><circle cx="840" cy="290" r="3" fill="#b48cff"/>
+  </g>
+  <!-- lidar-ish sweep rings -->
+  <g fill="none" stroke="#5ef1ff" stroke-opacity="0.10">
+    <circle cx="960" cy="170" r="70"/><circle cx="960" cy="170" r="120"/><circle cx="960" cy="170" r="175" stroke-dasharray="2 6"/>
+  </g>
+
+  <!-- faint ascii column -->
+  <g class="mono" font-size="11" fill="#2a3350">
+    <text x="1150" y="40">0x4F</text><text x="1150" y="58">0x4D</text><text x="1150" y="76">0x52</text><text x="1150" y="94">0x49</text>
+    <text x="1150" y="112">····</text><text x="1150" y="130">λ</text><text x="1150" y="148">∴</text>
+  </g>
+
+  <!-- window chrome -->
+  <g class="mono" font-size="12" fill="#5c6680">
+    <circle cx="44" cy="34" r="5" fill="#ff5f7e" opacity=".75"/><circle cx="62" cy="34" r="5" fill="#ffd166" opacity=".6"/><circle cx="80" cy="34" r="5" fill="#5ef1ff" opacity=".7"/>
+    <text x="100" y="38">omri@arch:~ — hyprland — zsh</text>
+  </g>
+
+  <!-- prompt -->
+  <text class="mono" x="72" y="92" font-size="16" fill="#5c6680"><tspan fill="#5ef1ff">❯</tspan> whoami</text>
+
+  <!-- name with glitch -->
+  <g class="mono" font-size="64" font-weight="700" letter-spacing="2">
+    <text class="glitch1" x="72" y="160" fill="#ff3d8b">OMRI BEN AMI</text>
+    <text class="glitch2" x="72" y="160" fill="#5ef1ff">OMRI BEN AMI</text>
+    <text x="72" y="160" fill="url(#accent)" filter="url(#glow)">OMRI BEN AMI</text>
+  </g>
+
+  <!-- typed subtitle -->
+  <g clip-path="url(#typeClip)">
+    <text class="mono" x="72" y="220" font-size="22" fill="#d6dcef">Autonomous Mobility Leader · AI Systems Builder · Technology Explorer</text>
+  </g>
+  <rect class="cursor" x="990" y="203" width="11" height="22" fill="#5ef1ff"><animate attributeName="x" begin="0s" dur="3.8s" fill="freeze" calcMode="discrete" values="72;72;85;98;112;125;138;151;165;178;191;204;218;231;244;257;271;284;297;310;324;337;350;363;377;390;403;416;430;443;456;469;483;496;509;522;536;549;562;575;589;602;615;628;642;655;668;681;695;708;721;734;747;761;774;787;800;814;827;840;853;867;880;893;906;920;933;946;959;973;986" keyTimes="0;0.1579;0.1701;0.1823;0.1945;0.2067;0.2189;0.2311;0.2433;0.2555;0.2677;0.2799;0.2921;0.3043;0.3166;0.3288;0.3410;0.3532;0.3654;0.3776;0.3898;0.4020;0.4142;0.4264;0.4386;0.4508;0.4630;0.4752;0.4874;0.4996;0.5118;0.5240;0.5362;0.5484;0.5606;0.5728;0.5850;0.5973;0.6095;0.6217;0.6339;0.6461;0.6583;0.6705;0.6827;0.6949;0.7071;0.7193;0.7315;0.7437;0.7559;0.7681;0.7803;0.7925;0.8047;0.8169;0.8291;0.8413;0.8535;0.8658;0.8780;0.8902;0.9024;0.9146;0.9268;0.9390;0.9512;0.9634;0.9756;0.9878;1.0000"/></rect>
+
+  <!-- meta line -->
+  <text class="mono" x="72" y="270" font-size="16" fill="#7a85a3">
+    <tspan fill="#b48cff">//</tspan> leads AV technical operations  <tspan fill="#3a4360">|</tspan>  builds AI that touches the real world  <tspan fill="#3a4360">|</tspan>  Austin, TX
+  </text>
+  <text class="mono" x="72" y="302" font-size="13" fill="#4a5578">[ arch ] [ hyprland ] [ python ] [ mcp ] [ home-assistant ] [ esp32 ]</text>
+
+  <!-- bottom accent line -->
+  <rect x="0" y="336" width="1200" height="4" fill="url(#accent)" opacity=".85"/>
+
+  <!-- scanlines + sweep -->
+  <rect width="1200" height="340" fill="url(#scan)"/>
+  <rect class="sweep" x="0" y="0" width="1200" height="40" fill="#5ef1ff" opacity="0.035"/>
+</svg>
